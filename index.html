@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wipro Employee Details</title>
+	<link href="https://fonts.googleapis.com/css?family=ArimaMadurai|OpenSansCondensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1 class="h1">Employee Finder</h1>
+	</div>
+	<div class="body container">
+		<form>
+			<div class="form-group">
+				<label for="inputMovie">Enter Details Of The Employee</label>
+				<input class="form-control searchMovie" type="text" id="inputName" placeholder="Name">
+				<input class="form-control searchMovie" type="text" id="inputAge" placeholder="Age">
+				<input class="btn btn-success pull-right" id="add" type="button" value="add">
+				<template id="data-template">
+						<li data-id="{{id}}">
+							<p>
+								<b>Name:</b> 
+								<span class="noEdit name">{{name}}</span>
+								<input class="edit name">
+							</p>
+							<p>
+								<b>Age:</b> 
+								<span class="noEdit age">{{age}}</span>
+								<input class="edit age">
+							</p>
+							<button data-id='{{id}}' class='remove btn btn-primary'>Delete</button>
+							<button class="editData noEdit btn btn-primary">Edit</button>
+							<button class="saveEdit edit btn btn-warning">Save</button>
+							<button class="cancelData edit btn btn-danger">Cancel</button>
+						</li>
+				</template>		
+		
+			</div>			
+		</form>
+		 <div class="table-section table-group">
+           <table class="table" id="dataTable" align="center">
+               <!-- <tr class="headings"><tr>Table Row
+                   <td>Poster</td>
+                   <td>Table Description</td>
+                   <td>Title</td>
+                   <td>Year</td>
+                   <td>imdbID</td>
+                   <td>Type</td>
+               </tr> -->
+           </table>
+       </div>		
+	</div>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="main.js"></script>	
+	<script src="mustache.min.js"></script>
+</body>
+</html>
