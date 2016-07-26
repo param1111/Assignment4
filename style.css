@@ -9,3 +9,6 @@ li.edit .edit{
 li.edit .noEdit{
 	display: none;
 }
+li{
+	display: inline;
+}
